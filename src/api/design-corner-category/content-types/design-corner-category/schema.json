@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "design_corner_categories",
+  "info": {
+    "singularName": "design-corner-category",
+    "pluralName": "design-corner-categories",
+    "displayName": "Design Corner Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean"
+    }
+  }
+}

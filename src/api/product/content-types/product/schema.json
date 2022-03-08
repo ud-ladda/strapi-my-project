@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product Catalog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "design_corners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::design-corner.design-corner",
+      "inversedBy": "product_catalogs"
+    },
+    "product_catalog_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-catalog-category.product-catalog-category",
+      "inversedBy": "product_catalogs"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_catalog_categories",
+  "info": {
+    "singularName": "product-catalog-category",
+    "pluralName": "product-catalog-categories",
+    "displayName": "Product Catalog Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "status": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "product_catalogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "product_catalog_categories"
+    }
+  }
+}
